@@ -112,48 +112,48 @@ namespace CodePasteWizard
 
         private void SaveCurrentData()
         {
-            var dataToSave = new
-            {
-                Snippets = codeSnippets,
-                TargetDirectory = targetDirectory
-            };
+            //var dataToSave = new
+            //{
+            //    Snippets = codeSnippets,
+            //    TargetDirectory = targetDirectory
+            //};
 
-            string jsonString = JsonSerializer.Serialize(dataToSave);
-            File.WriteAllText(DataFileName, jsonString);
+            //string jsonString = JsonSerializer.Serialize(dataToSave);
+            //File.WriteAllText(DataFileName, jsonString);
         }
 
         private void LoadSavedData()
         {
-            if (File.Exists(DataFileName))
-            {
-                string jsonString = File.ReadAllText(DataFileName);
-                try
-                {
-                    var loadedData = JsonSerializer.Deserialize<JsonElement>(jsonString);
+            //if (File.Exists(DataFileName))
+            //{
+            //    string jsonString = File.ReadAllText(DataFileName);
+            //    try
+            //    {
+            //        var loadedData = JsonSerializer.Deserialize<JsonElement>(jsonString);
 
-                    if (loadedData.TryGetProperty("Snippets", out JsonElement snippetsElement))
-                    {
-                        var loadedSnippets = snippetsElement.EnumerateArray()
-                            .Select(element => element.GetString() ?? string.Empty)
-                            .ToList();
+            //        if (loadedData.TryGetProperty("Snippets", out JsonElement snippetsElement))
+            //        {
+            //            var loadedSnippets = snippetsElement.EnumerateArray()
+            //                .Select(element => element.GetString() ?? string.Empty)
+            //                .ToList();
 
-                        // Ensure we always have 10 slots
-                        codeSnippets = loadedSnippets.Concat(Enumerable.Repeat(string.Empty, 10 - loadedSnippets.Count)).Take(10).ToList();
-                    }
+            //            // Ensure we always have 10 slots
+            //            codeSnippets = loadedSnippets.Concat(Enumerable.Repeat(string.Empty, 10 - loadedSnippets.Count)).Take(10).ToList();
+            //        }
 
-                    if (loadedData.TryGetProperty("TargetDirectory", out JsonElement targetDirectoryElement))
-                    {
-                        targetDirectory = targetDirectoryElement.GetString() ?? string.Empty;
+            //        if (loadedData.TryGetProperty("TargetDirectory", out JsonElement targetDirectoryElement))
+            //        {
+            //            targetDirectory = targetDirectoryElement.GetString() ?? string.Empty;
                        
-                    }
+            //        }
 
-                    UpdateUI();
-                }
-                catch (JsonException ex)
-                {
-                    MessageBox.Show($"Error loading saved data: {ex.Message}", "Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //        UpdateUI();
+            //    }
+            //    catch (JsonException ex)
+            //    {
+            //        MessageBox.Show($"Error loading saved data: {ex.Message}", "Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
 
         private void textBoxInput_TextChanged(object sender, EventArgs e)

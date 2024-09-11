@@ -49,6 +49,7 @@ namespace CodePasteWizard
             buttonClearAll = new Button();
             buttonClearSlot = new Button();
             pbRight = new PictureBox();
+            label1 = new Label();
             flowLayoutPanelNumbers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbRight).BeginInit();
             SuspendLayout();
@@ -215,7 +216,7 @@ namespace CodePasteWizard
             // 
             // buttonCopyTop
             // 
-            buttonCopyTop.Location = new Point(539, 34);
+            buttonCopyTop.Location = new Point(845, 34);
             buttonCopyTop.Margin = new Padding(4, 3, 4, 3);
             buttonCopyTop.Name = "buttonCopyTop";
             buttonCopyTop.Size = new Size(125, 27);
@@ -226,7 +227,7 @@ namespace CodePasteWizard
             // 
             // buttonCopyBottom
             // 
-            buttonCopyBottom.Location = new Point(539, 455);
+            buttonCopyBottom.Location = new Point(845, 455);
             buttonCopyBottom.Margin = new Padding(4, 3, 4, 3);
             buttonCopyBottom.Name = "buttonCopyBottom";
             buttonCopyBottom.Size = new Size(125, 27);
@@ -238,7 +239,7 @@ namespace CodePasteWizard
             // labelDetectedFilename
             // 
             labelDetectedFilename.AutoSize = true;
-            labelDetectedFilename.Location = new Point(539, 9);
+            labelDetectedFilename.Location = new Point(539, 46);
             labelDetectedFilename.Margin = new Padding(4, 0, 4, 0);
             labelDetectedFilename.Name = "labelDetectedFilename";
             labelDetectedFilename.Size = new Size(111, 15);
@@ -276,11 +277,22 @@ namespace CodePasteWizard
             pbRight.TabIndex = 13;
             pbRight.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(452, 182);
+            label1.Name = "label1";
+            label1.Size = new Size(79, 21);
+            label1.TabIndex = 14;
+            label1.Text = "PROCESS";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(986, 544);
+            Controls.Add(label1);
             Controls.Add(pbRight);
             Controls.Add(buttonClearSlot);
             Controls.Add(buttonClearAll);
@@ -321,5 +333,6 @@ namespace CodePasteWizard
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private PictureBox pbRight;
+        private Label label1;
     }
 }
