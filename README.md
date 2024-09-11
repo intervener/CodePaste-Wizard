@@ -3,7 +3,7 @@ CodePaste Wizard is an open-source utility designed to streamline the process of
 
 
 
-![screenshot](https://github.com/intervener/CodePaste-Wizard/screenshot.png)
+![screenshot](https://github.com/intervener/CodePaste-Wizard/tree/master/screenshot.png)
 
 
 
