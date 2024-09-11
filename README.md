@@ -5,6 +5,8 @@ CodePaste Wizard is an open-source utility designed to streamline the process of
 
 ![screenshot](https://github.com/user-attachments/assets/c4e780f1-6e93-4bbd-9a3e-744f3a6cb8f7)
 
+*Detected filename will be automatically retrieved from the top if available. You can prompt Claude "List filename at top of code window"
+
 Features
 
 Merge up to 10 code snippets with automatic overlap detection and removal
